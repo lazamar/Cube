@@ -7,8 +7,8 @@ const exphbs = require('express-handlebars');
 app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: 'admin' }));
 app.set('view engine', '.hbs');
 
-app.get('/', (req, res) => {
-	res.render('index');
-});
+// Routes
+app.get('/', require('./views/index'));
 
+// Start server
 app.listen(env.port, () => console.log('Listening on port', env.port));
