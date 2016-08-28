@@ -18,9 +18,9 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="/">Home</a></li>
-            <li role="presentation"><a href="/database">Database</a></li>
-            <li role="presentation"><a href="#">Pages</a></li>
+            {{#each navbar}}
+              <li role="presentation" class="{{#is ../title label}} active {{/is}}"><a href="{{ href }}">{{ label }}</a></li>
+            {{/each}}
           </ul>
         </nav>
         <h3 class="text-muted">Cube</h3>
