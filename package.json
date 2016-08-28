@@ -1,0 +1,21 @@
+{
+  "name": "cube-cms",
+  "version": "0.0.1",
+  "description": "Simple admin CMS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cms",
+    "cube"
+  ],
+  "author": "lazamar",
+  "license": "ISC",
+  "devDependencies": {
+    "mongodb": "^2.2.8"
+  },
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
