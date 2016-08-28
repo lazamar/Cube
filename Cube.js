@@ -11,6 +11,12 @@ const database = require('./database');
 Cube.database = database;
 database.getDatabase(env.database).then(db => {
 	Cube.db = db;
+	// database.getCollection('test')
+	// .then(col => {
+	// 	database.insert(col, { fields: [
+	// 		{ label: 'Name', value: 'Marcelo', type: 'text' }
+	// 	]})
+	// })
 });
 
 // initialise routes

@@ -23,7 +23,8 @@ module.exports.getDatabase = function getDatabase(dbName) {
 module.exports.listCollections = function listCollections(db) {
 	return new Promise((resolve, reject) => {
 		db.listCollections().toArray((err, collections) => {
-			return err ? reject(err) : resolve(collections);
+			const colsFiltered = collections.filter(col => col.name !== 'system.indexes');
+			return err ? reject(err) : resolve(colsFiltered);
 		});
 	});
 };

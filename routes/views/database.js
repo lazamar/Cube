@@ -1,5 +1,5 @@
 module.exports = (req, res) => {
-	const Cube = require('../../Cube'); // eslint-disable-line global-require
+	const Cube = rootRequire('Cube'); // eslint-disable-line global-require
 
 	const locals = res.locals;
 	locals.title = 'Database';
