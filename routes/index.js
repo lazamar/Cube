@@ -8,6 +8,7 @@ app.engine('.hbs', exphbs({ extname: '.hbs', defaultLayout: 'admin' }));
 app.set('view engine', '.hbs');
 
 // Routes
+app.use(express.static('public'));
 app.get('/', require('./views/index'));
 
 // Start server

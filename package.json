@@ -4,7 +4,8 @@
   "description": "Simple admin CMS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Cube.js"
   },
   "keywords": [
     "cms",
@@ -16,7 +17,12 @@
     "mongodb": "^2.2.8"
   },
   "dependencies": {
+    "bootstrap-sass": "^3.3.7",
     "express": "^4.14.0",
-    "express-handlebars": "^3.0.0"
+    "express-handlebars": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.5.2",
+    "require-dir-all": "^0.4.9"
   }
 }
