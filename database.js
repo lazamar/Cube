@@ -18,6 +18,18 @@ module.exports.getDatabase = function getDatabase(dbName) {
 
 /**
  * @param  {DB} db
+ * @return {Promise<Collection>}
+ */
+module.exports.listCollections = function listCollections(db) {
+	return new Promise((resolve, reject) => {
+		db.listCollections().toArray((err, collections) => {
+			return err ? reject(err) : resolve(collections);
+		});
+	});
+};
+
+/**
+ * @param  {DB} db
  * @param  {String} collectionName
  * @return {Promise<Collection>}
  */
@@ -57,9 +69,9 @@ module.exports.find = function find(collection, criteria) {
 };
 
 
-module.exports.findAll = function findAll(collection, criteria) {
+module.exports.findAll = function findAll(collection, criteria = {}) {
 	return new Promise((resolve, reject) => {
-		collection.find(criteria, (err, record) => {
+		collection.find(criteria).toArray((err, record) => {
 			return err ? reject(err) : resolve(record);
 		});
 	});
