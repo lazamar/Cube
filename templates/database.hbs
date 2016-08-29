@@ -1,6 +1,17 @@
 {{#each databases}}
 	<h2>{{ title }}</h2>
-	<p>
-		{{ records }}
-	</p>
+	{{#each records}}
+		{{#each fields}}
+
+			<h4>{{ label }}</h4>
+
+			{{#is type "Html"}}
+				{{{ value }}}
+			{{/is}}
+			{{#is type "text"}}
+				<p>{{ value }}</p>
+			{{/is}}
+
+		{{/each}}
+	{{/each}}
 {{/each}}

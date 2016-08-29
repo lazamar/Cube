@@ -17,7 +17,7 @@ module.exports = (req, res) => {
 	})
 	.then(records => {
 		return collections.map((col, idx) => {
-			return { title: collectionNames[idx], records: JSON.stringify(records[idx]) };
+			return { title: collectionNames[idx], records: records[idx] };
 		});
 	})
 	.then(databases => {
