@@ -14,6 +14,10 @@
   "author": "lazamar",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.16.0",
+    "gulp-organiser": "^1.0.6",
+    "gulp-shell": "^0.5.2",
+    "lodash": "^4.16.1",
     "mongodb": "^2.2.8"
   },
   "dependencies": {

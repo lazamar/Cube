@@ -1,6 +1,0 @@
-{
-	"styles": {
-		"src": "./public_src/styles/**/*.scss",
-		"dist": "./public/styles/"
-	}
-}
