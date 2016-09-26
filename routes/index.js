@@ -22,6 +22,11 @@ app.use(middleware);
 app.use(express.static('public'));
 app.get('/', require('./views/index'));
 app.get('/database', require('./views/database'));
+app.get('/finances', (req, res) => res.redirect('/finances/statistics'));
+app.get('/finances/statistics', require('./views/finances-statistics'));
+app.get('/finances/entries', require('./views/finances-entries'));
+app.get('/finances/expenses', require('./views/finances-expenses'));
+
 
 // Start server
 app.listen(env.port, () => console.log('Listening on port', env.port));
