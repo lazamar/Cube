@@ -1,24 +1,25 @@
-<div>
-  <a href="/finances/entries" class="btn btn-default">Entradas</a>
-  <a href="/finances/expenses" class="btn btn-default">Despesas</a>
-  <a href="/finances/statistics" class="btn btn-default">Estatísticas</a>
-</div>
+{{>finances-menu}}
+
+<h2>Despesas</h2>
 <table class="table table-sm table-hover">
   <thead>
     <tr>
-      <th>#</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th>Descriação</th>
+      <th>Valor</th>
+      <th>Data</th>
+      <th>Categoria</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
+    {{#each data}}
+      <tr>
+        <td>{{description}}</td>
+        <td>{{amount}}</td>
+        <td>{{date}}</td>
+        <td>{{category}}</th>
+      </tr>
+    {{/each}}
+
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>

@@ -8,7 +8,7 @@ const swag = require('swag');
 app.engine('.hbs', exphbs({
 	extname: '.hbs',
 	defaultLayout: 'admin',
-	helpers: swag.helpers,
+	helpers: require('../templates/helpers'),
 	layoutsDir: 'templates/layouts',
 	partialsDir: 'templates/partials',
 }));

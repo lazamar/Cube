@@ -27,6 +27,7 @@
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.2",
     "gulp-shell": "^0.5.2",
+    "moment": "^2.15.1",
     "require-dir-all": "^0.4.9",
     "swag": "^0.7.0"
   }
