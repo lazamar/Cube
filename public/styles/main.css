@@ -2846,40 +2846,48 @@ a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none; }
 
-.btn-default {
+.btn-default, .btn-transparent {
   color: #757575;
   background-color: #f2f2f2;
   border-color: #f2f2f2; }
-  .btn-default:focus, .btn-default.focus {
+  .btn-default:focus, .btn-transparent:focus, .btn-default.focus, .focus.btn-transparent {
     color: #757575;
     background-color: #d9d9d9;
     border-color: #b2b2b2; }
-  .btn-default:hover {
+  .btn-default:hover, .btn-transparent:hover {
     color: #757575;
     background-color: #d9d9d9;
     border-color: lightgray; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .btn-transparent:active, .btn-default.active, .active.btn-transparent,
+  .open > .btn-default.dropdown-toggle,
+  .open > .dropdown-toggle.btn-transparent {
     color: #757575;
     background-color: #d9d9d9;
     border-color: lightgray; }
-    .btn-default:active:hover, .btn-default:active:focus, .btn-default:active.focus, .btn-default.active:hover, .btn-default.active:focus, .btn-default.active.focus,
+    .btn-default:active:hover, .btn-transparent:active:hover, .btn-default:active:focus, .btn-transparent:active:focus, .btn-default:active.focus, .btn-transparent:active.focus, .btn-default.active:hover, .active.btn-transparent:hover, .btn-default.active:focus, .active.btn-transparent:focus, .btn-default.active.focus, .active.focus.btn-transparent,
     .open > .btn-default.dropdown-toggle:hover,
+    .open > .dropdown-toggle.btn-transparent:hover,
     .open > .btn-default.dropdown-toggle:focus,
-    .open > .btn-default.dropdown-toggle.focus {
+    .open > .dropdown-toggle.btn-transparent:focus,
+    .open > .btn-default.dropdown-toggle.focus,
+    .open > .dropdown-toggle.focus.btn-transparent {
       color: #757575;
       background-color: #c7c7c7;
       border-color: #b2b2b2; }
-  .btn-default:active, .btn-default.active,
-  .open > .btn-default.dropdown-toggle {
+  .btn-default:active, .btn-transparent:active, .btn-default.active, .active.btn-transparent,
+  .open > .btn-default.dropdown-toggle,
+  .open > .dropdown-toggle.btn-transparent {
     background-image: none; }
-  .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled.focus, .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled].focus,
+  .btn-default.disabled:hover, .disabled.btn-transparent:hover, .btn-default.disabled:focus, .disabled.btn-transparent:focus, .btn-default.disabled.focus, .disabled.focus.btn-transparent, .btn-default[disabled]:hover, [disabled].btn-transparent:hover, .btn-default[disabled]:focus, [disabled].btn-transparent:focus, .btn-default[disabled].focus, [disabled].focus.btn-transparent,
   fieldset[disabled] .btn-default:hover,
+  fieldset[disabled] .btn-transparent:hover,
   fieldset[disabled] .btn-default:focus,
-  fieldset[disabled] .btn-default.focus {
+  fieldset[disabled] .btn-transparent:focus,
+  fieldset[disabled] .btn-default.focus,
+  fieldset[disabled] .focus.btn-transparent {
     background-color: #f2f2f2;
     border-color: #f2f2f2; }
-  .btn-default .badge {
+  .btn-default .badge, .btn-transparent .badge {
     color: #f2f2f2;
     background-color: #757575; }
 
@@ -5934,6 +5942,13 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
+
+.btn-transparent {
+  background-color: transparent;
+  border-color: transparent; }
+  .btn-transparent:hover {
+    background-color: #f2f2f2;
+    border-color: #f2f2f2; }
 
 /* Space out content a bit */
 body {

@@ -1,9 +1,9 @@
-$font-family-sans-serif: 'Lato', sans-serif;
-$gray-light: #757575;
-$gray-lighter: #f2f2f2;
-
-$border-radius-base: 2px;
-$brand-primary: #115677;
-$btn-default-bg: $gray-lighter;
-$btn-default-border: $gray-lighter;
-$btn-default-color: $gray-light;
+.btn-transparent {
+  @extend .btn-default;
+  background-color: transparent;
+  border-color: transparent;
+  &:hover {
+    background-color: $btn-default-bg;
+    border-color: $btn-default-bg;
+  }
+}

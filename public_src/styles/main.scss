@@ -1,7 +1,8 @@
 @import 'https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css';
 @import 'https://fonts.googleapis.com/css?family=Lato';
-@import './common';
+@import './variables';
 @import 'node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import './common';
 @import 'jumbotron-narrow';
 
 @import './pages/index';
